@@ -7,12 +7,15 @@ This package provides specific information about a user's browser, grabbed from 
 
 Getting Started
 ---------------
+First, install it:
 
     goinstall github.com/crazy2be/browser
 
+Then, import it:
 
     import "github.com/crazy2be/browser"
 
+Finally, use it:
 
     if browser.IsMobile(r) {
         ...
