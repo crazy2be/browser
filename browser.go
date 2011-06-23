@@ -21,25 +21,25 @@ func hasAnySubstring(agent string, substrings []string) bool {
 }
 
 func IsMobile(r *http.Request) bool {
-	is := hasAnySubstring(r.UserAgent, mobileAgentSubstrings)
+	is := hasAnySubstring(r.UserAgent(), mobileAgentSubstrings)
 	if is {
-		fmt.Println("Mobile browser detected! User-Agent:", r.UserAgent)
+		fmt.Println("Mobile browser detected! User-Agent:", r.UserAgent())
 	}
 	return is
 }
 
 func IsIE(r *http.Request) bool {
-	is := hasAnySubstring(r.UserAgent, ieAgentSubstrings)
+	is := hasAnySubstring(r.UserAgent(), ieAgentSubstrings)
 	if is {
-		fmt.Println("IE detected! User-Agent:", r.UserAgent)
+		fmt.Println("IE detected! User-Agent:", r.UserAgent())
 	}
 	return is
 }
 
 func IsFirefox(r *http.Request) bool {
-	is := hasAnySubstring(r.UserAgent, firefoxAgentSubstrings)
+	is := hasAnySubstring(r.UserAgent(), firefoxAgentSubstrings)
 	if is {
-		fmt.Println("Firefox detected! User-Agent:", r.UserAgent)
+		fmt.Println("Firefox detected! User-Agent:", r.UserAgent())
 	}
 	return is
 }
