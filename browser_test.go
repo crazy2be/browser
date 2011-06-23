@@ -17,7 +17,8 @@ var firefoxUserAgentTests = [...]string{
 
 func makeReq(userAgent string) *http.Request {
 	r := new(http.Request)
-	r.UserAgent = userAgent
+	r.Header = make(http.Header)
+	r.Header.Set("User-Agent", userAgent)
 	return r
 }
 
