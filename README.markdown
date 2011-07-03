@@ -22,3 +22,8 @@ Finally, use it:
     } else {
        ...
     }
+
+Functions
+---------
+
+Full function reference is available at http://gopkgdoc.appspot.com/pkg/github.com/crazy2be/browser.
