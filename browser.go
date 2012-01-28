@@ -3,13 +3,13 @@ package browser
 
 import (
 	"strings"
-	"http"
+	"net/http"
 	"fmt"
 )
 
-var mobileAgentSubstrings = [...]string{"iPod", "iPhone", "Mobile", "Phone", "Android"}[:]
-var ieAgentSubstrings = [...]string{"MSIE"}[:]
-var firefoxAgentSubstrings = [...]string{"Firefox"}[:]
+var mobileAgentSubstrings = []string{"iPod", "iPhone", "Mobile", "Phone", "Android"}
+var ieAgentSubstrings = []string{"MSIE"}
+var firefoxAgentSubstrings = []string{"Firefox"}
 
 func hasAnySubstring(agent string, substrings []string) bool {
 	for _, substr := range substrings {
